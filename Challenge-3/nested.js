@@ -15,6 +15,7 @@ nested = function(object, key) {
 	        value: object
 	      }
 	    ];
+		console.log(object)
 	  } else {
 	    return [].concat.apply([], _(pairs).map(function(kv) {
 	      return nested(kv[1], key.concat(kv[0]));
