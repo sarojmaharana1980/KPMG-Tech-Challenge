@@ -11,6 +11,31 @@ import "strings"
 
 type MetaData interface{}
 
+// Function retriveData retrives data from passed url
+// Arguements : url
+// Return type : Array of Strings 
+
+func retriveData(url string) []string {
+	response, error := http.Get(url)
+	if error != nil {
+		log.Fatalf(format:"erroror: %v\n", error)
+		os.Exit(1)
+	}
+	defer response.Body.Close()
+	reader := bufio.NewReader(response.Body)
+	data := make([]string, 0)
+	for {
+		line, error := reader.ReadString('\n')
+		data = append(data, strings.TrimRight(line, "\n"))
+		if error != nil {
+			break
+		}
+	}
+	return data
+}
+
+
+
 // Function getMetaData retrives meteadata from passed url
 // Arguements : url
 // Return type : Metadata 
@@ -44,9 +69,9 @@ func main() {
 	//get metadata using getMetaData method
 	
 	metaData := getMetaData(url)
-	cont, err := json.Marshal(metaData)
-	if err != nil {
-		log.Fatalf(format:"Error: %v\n", err)
+	cont, error := json.Marshal(metaData)
+	if error != nil {
+		log.Fatalf(format:"erroror: %v\n", error)
 		os.Exit(1)
 	}
 	if len(os.Args) == 1 {
