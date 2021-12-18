@@ -11,7 +11,7 @@ import "strings"
 
 type MetaData interface{}
 
-// main method started
+//main method started
 
 func main() {
 	var info map[string]interface{}
@@ -27,10 +27,12 @@ func main() {
 		os.Exit(1)
 	}
 	if len(os.Args) == 1 {
+	    // write the output
 		os.Stdout.Write(cont)
 		fmt.Println()
 	}
 	if len(os.Args) == 2 {
+	    // Started formatiing json format
 		json.Unmarshal([]byte(cont),&info)
 		gettingArgs := os.Args[1] 
 		fmt.Println(info[gettingArgs])
