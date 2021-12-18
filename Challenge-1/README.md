@@ -7,6 +7,7 @@ Approach :
 1) Choosed Google Cloud Platform to host a 3-tier application
 
 2) Created architecture diagram (which explains networking, hosting and communication betwwen each layer of environment)
+   Please use Microsoft-PPT for better to view this diagram
 
 3) Explained in details how proposed set-up useful by considering below parameter
     a) Re-use of existing services of GCP
