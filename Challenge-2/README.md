@@ -6,8 +6,10 @@ provide a json formatted output. The choice of language and implementation is up
 
 ###Approach to this challenge
 
-Introduced a 'go' script which will fetch the metadata of a EC2 instance by passing (ami-id)from AWS
+Introduced a 'go' script which will fetch the metadata of a EC2 instance from AWS
 and returned data is presented json format
+
+Go language is prefered for this challenge as it provides  faster execution and easy to learn
 
 For whole meta data of EC2 instance run 
 ````
