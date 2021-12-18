@@ -11,9 +11,11 @@ import "strings"
 
 type MetaData interface{}
 
-// Function retriveData retrives data from passed url
-// Arguements : url
-// Return type : Array of Strings 
+/* 
+   Function retriveData retrives data from passed url
+   Arguements : url
+   Return type : Array of Strings 
+*/
 
 func retriveData(url string) []string {
 	response, error := http.Get(url)
@@ -36,9 +38,11 @@ func retriveData(url string) []string {
 
 
 
-// Function getMetaData retrives meteadata from passed url
-// Arguements : url
-// Return type : Metadata 
+/* 
+   Function getMetaData retrives meteadata from passed url
+   Arguements : url
+   Return type : Metadata 
+*/
 
 func getMetaData(url string) MetaData {
 	metaData := make(map[string]interface{})
