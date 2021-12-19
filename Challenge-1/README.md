@@ -14,3 +14,5 @@ Approach :
 	c) Highly secure environement as present on on-premises
 	d) Consider future rediness and adapt upcoming changes to environment
 	e) Proposed agile methodlogy and combining devops practice to make environment market ready
+	
+4)Please use Microsoft office tool for better visibility
