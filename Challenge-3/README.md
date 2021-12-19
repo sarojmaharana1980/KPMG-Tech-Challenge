@@ -13,6 +13,8 @@ value = a
 
 Added javascript which will iterate through the object  value and extract the key and and values
 
+Detail steps of execution mentioned as a commentline 
+
 Other alternatives available
 
 Use of Lodash libraries

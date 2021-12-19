@@ -6,9 +6,9 @@ var object, nested;
 
 
 nested = function(object, key) {
-	  var pairs;
-	  //get pair length
-	  if (!(pairs = _(object).pairs()).length) {
+	  var mappairs;
+	  //get pair length and validate
+	  if (!(mappairs = _(object).mappairs()).length) {
 	    return [
 	      {
 	        keys: key,
@@ -17,7 +17,8 @@ nested = function(object, key) {
 	    ];
 		console.log(object)
 	  } else {
-	    return [].concat.apply([], _(pairs).map(function(kv) {
+		  // get data directly from map object
+	    return [].concat.apply([], _(mappairs).map(function(kv) {
 	      return nested(kv[1], key.concat(kv[0]));
 	    }));
 	  }
